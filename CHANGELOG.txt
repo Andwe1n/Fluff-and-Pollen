@@ -1,0 +1,41 @@
+v1.1 — MEADOW & MAGIC
+
+VISUALS
+Animated bee wings, gentle hovering, banking, and gradual facing changes.
+Patrols ease into and out of endpoints instead of turning abruptly.
+Every dirt-block obstacle is replaced by a flowering shrub.
+Softer sage grass, warm sand paths, muted forest-green UI, honey highlights.
+Dash trails, Breeze effects, and a visible Magnet collection radius.
+
+HIVE ATELIER
+Seven selectable ability cards with effect descriptions and ownership.
+Abilities and Training tabs; current wallet and three visible loadout slots.
+Six Level II upgrades that use no extra skill slot.
+Clear costs, insufficient-funds feedback, and replacement confirmation.
+Descriptions show current upgraded stats. Unequipping keeps ownership.
+
+NEW POWERS
+Pollen Magnet: 70 coins; gathers within 58 units with clear line of sight.
+Training: 70 coins; radius increases to 78.
+Meadow Breeze: 90 coins; Q slows bees by 55% for 4 seconds, 12s cooldown.
+Training: 80 coins; duration increases to 6 seconds.
+Lucky Bloom: 80 coins; every fourth fully harvested flower adds up to
+2 bonus pollen if space remains. Training: 75 coins; every third flower.
+
+EXISTING SKILL TRAINING
+Speed: 55 coins; +15% becomes +25% movement speed.
+Bag: 70 coins; 15 capacity becomes 20.
+Dash: 65 coins; cooldown decreases from 5 to 3.5 seconds.
+Shield keeps its one-hit protection and delivery recharge; no second rank.
+
+BUG FIXES
+Dash distance and particle decay no longer depend on render frame rate.
+Small simulation steps prevent skipping bee contacts during a low-FPS dash.
+Dash direction is fixed at activation; knockback prevents starting a dash.
+Negative collection amounts cannot remove pollen.
+Escape returns correctly from Settings and How to Play.
+Invalid save field types are rejected without partial state restoration.
+Save write/commit failures are surfaced in the game.
+v1.0 saves migrate with a one-time backup.
+Power training and re-equipping cannot bypass cooldowns or refill Shield.
+The regression harness now returns a failing process status on failed checks.

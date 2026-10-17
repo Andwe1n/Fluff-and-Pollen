@@ -1,0 +1,32 @@
+FLUFF & POLLEN v1.1 — BUILD VALIDATION
+Godot 4.4.1 stable, Compatibility/OpenGL renderer.
+
+Regression suite: 2,394 checks, zero failures.
+New feature suite: 36 checks, zero failures.
+The regression count includes repeated patrol-route geometry samples;
+it does not represent 2,394 independent gameplay scenarios.
+
+New checks cover training prices/stats; bag restrictions; Breeze timing,
+cooldowns, and real patrol slowdown; save/load of powers and ranks;
+v1.0 migration and backup; malformed saves and write failures; Lucky
+bonuses; Magnet range and obstacle blocking; equal dash distance at
+4 FPS and 120 FPS; bee collision during low-FPS dash; paused timers;
+Escape menu navigation; and actual card, buy, and training callbacks.
+
+Title, gameplay, shop, training, and final meadow were rendered with the
+real OpenGL renderer and visually inspected. Bee animation was captured
+across 18 frames. Screenshots and an animation preview are included.
+
+Windows and Linux x86_64 release builds exported without errors.
+The Linux standalone executable launched successfully with exit code zero.
+Windows was exported but could not be launched on Windows in this environment.
+Audio was implemented but not auditioned; the environment has no audio device.
+Visual checks used the Dummy audio driver. Forced --quit-after termination
+can report pending audio resources; the visual harness stops audio before
+shutdown and exits cleanly. The virtual display cannot change V-Sync.
+No gameplay script errors occurred in the final test runs.
+Long-session balancing still needs human playtesting.
+
+Re-run from the source project, after importing assets:
+godot --headless --path . --script tests/test_game.gd
+godot --headless --path . --script tests/test_upgrade.gd
